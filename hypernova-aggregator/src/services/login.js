@@ -1,16 +1,20 @@
 
 const axios = require('axios')
 
-module.exports.getLayout = () => {
+module.exports.getLogin = () => {
   return axios.post('http://0.0.0.0:3031/batch', {
     header: {
-      name: 'Header',
+      name: 'Login',
       data: {
-        title: 'Nineleaps',
+        title: 'Wizeline',
         links: [
           {
-            url: 'https://www.nineleaps.com/',
+            url: 'https://www.wizeline.com/',
             text: 'Home'
+          },
+          {
+            url: 'https://github.com/airbnb/hypernova',
+            text: 'Hypernova'
           }
         ]
       }

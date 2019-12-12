@@ -38,6 +38,27 @@ const client = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader','sass-loader']
+      },
+      { 
+        test: /\.css$/, 
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'] 
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png|svg|webp|ico)$/,
+        use: [
+            {
+                loader: "file-loader",
+                options: {
+                    outputPath: './images',
+                    name: "[name].[ext]",
+                },
+            },
+        ]
+      },
     ],
   },
   resolve: {
