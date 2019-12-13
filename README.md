@@ -4,6 +4,9 @@
 
 ```sh
 sh setup.sh
+sh runApp.sh
+    OR
+sh setup.sh
 cd hypernova-aggregator
 yarn buildAll
 yarn runAll
